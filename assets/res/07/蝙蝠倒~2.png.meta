@@ -1,0 +1,36 @@
+{
+  "ver": "2.3.5",
+  "uuid": "8bd71d2b-e074-43de-aa23-92c7bc03206b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "premultiplyAlpha": false,
+  "genMipmaps": false,
+  "packable": true,
+  "width": 176,
+  "height": 142,
+  "platformSettings": {},
+  "subMetas": {
+    "蝙蝠倒~2": {
+      "ver": "1.0.4",
+      "uuid": "2af98ea9-f0a2-4a4a-9df9-94a176dab43c",
+      "rawTextureUuid": "8bd71d2b-e074-43de-aa23-92c7bc03206b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 176,
+      "height": 142,
+      "rawWidth": 176,
+      "rawHeight": 142,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

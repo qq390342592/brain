@@ -1,0 +1,9 @@
+{
+  "engine": "cocos-creator-js",
+  "packages": "packages",
+  "name": "brain",
+  "uuid": "2c8c5313-e771-4785-94e9-d458c7d3d151",
+  "version": "2.4.0",
+  "id": "33b9130c-ee6f-4e73-b28a-c75455f3b7b3",
+  "isNew": false
+}
