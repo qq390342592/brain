@@ -30,6 +30,8 @@ export default class infoPanel extends cc.Component {
     }
 
     close() {
+        this.UIM.bgClickPlay();
+        
         this.node.active = false;
     }
 

@@ -22,6 +22,7 @@ export default class SelectPanel extends cc.Component {
     return() {
         this.node.active = false;
         this.UIM.MP.node.active = true;
+        this.UIM.bgClickPlay();
     }
 
     // update (dt) {}

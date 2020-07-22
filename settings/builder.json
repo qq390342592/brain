@@ -19,7 +19,7 @@
   "inlineSpriteFrames_native": true,
   "mergeStartScene": false,
   "optimizeHotUpdate": false,
-  "md5Cache": true,
+  "md5Cache": false,
   "encryptJs": true,
   "xxteaKey": "3616d092-6df5-4c",
   "zipCompressJs": true,
@@ -53,7 +53,7 @@
     "skipRecord": false
   },
   "appBundle": false,
-  "mainCompressionType": "default",
-  "mainIsRemote": false,
+  "mainCompressionType": "merge_all_json",
+  "mainIsRemote": true,
   "nativeMd5Cache": true
 }

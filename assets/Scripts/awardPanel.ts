@@ -3,7 +3,7 @@ import UIManager from "./UIManager";
 const { ccclass, property } = cc._decorator;
 
 @ccclass
-export default class MainPanel extends cc.Component {
+export default class awardPanel extends cc.Component {
 
     @property(UIManager)
     UIM: UIManager;
@@ -14,11 +14,19 @@ export default class MainPanel extends cc.Component {
 
     }
 
-    startButton() {
+    close() {
         this.UIM.bgClickPlay();
-        this.UIM.MP.node.active = false;
-        // this.UIM.title.active = false;
-        this.UIM.SP.node.active = true;
+
+    }
+
+    get() {
+        this.UIM.bgClickPlay();
+
+    }
+
+    double() {
+        this.UIM.bgClickPlay();
+
     }
 
 

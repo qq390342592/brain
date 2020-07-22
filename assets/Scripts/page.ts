@@ -1,4 +1,5 @@
 import SelectPanel from "./SelectPanel";
+import UIManager from "./UIManager";
 
 const { ccclass, property } = cc._decorator;
 
@@ -16,9 +17,14 @@ export default class page extends cc.Component {
     @property(Number)
     AllTheLevels: number = 3;
 
+    @property(UIManager)
+    UIM: UIManager;
+
     n: number = 0;
 
-    // onLoad () {}
+    onLoad() {
+
+    }
 
     onEnable() {
 
@@ -45,6 +51,7 @@ export default class page extends cc.Component {
 
     //向后翻
     back() {
+        this.UIM.bgClickPlay();
         var a = this.node.children;
         for (var i = 0; i < a.length; i++) {
             //如果该页面是激活状态
@@ -61,6 +68,7 @@ export default class page extends cc.Component {
 
     //向前翻
     next() {
+        this.UIM.bgClickPlay();
         var a = this.node.children;
         for (var i = 0; i < a.length; i++) {
             if (a[i].active == true) {
@@ -77,6 +85,7 @@ export default class page extends cc.Component {
     EnterTheGate(event, customEventData) {
         //
         var UIM = this.node.parent.getComponent(SelectPanel).UIM;
+        UIM.bgClickPlay();
         //
         UIM.SP.node.active = false;
         UIM.GP.node.active = true;
