@@ -119,7 +119,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 159.96,
+      "width": 153.96,
       "height": 75.6
     },
     "_anchorPoint": {
@@ -172,8 +172,8 @@
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_useOriginalSize": false,
-    "_string": "关卡8",
-    "_N$string": "关卡8",
+    "_string": "关卡7",
+    "_N$string": "关卡7",
     "_fontSize": 60,
     "_lineHeight": 60,
     "_enableWrapText": true,

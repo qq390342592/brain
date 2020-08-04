@@ -23,6 +23,8 @@ export default class infoPanel extends cc.Component {
 
         this.PMLabel.string = str;
 
+        this.node.children[0].children[0].getComponent(cc.Animation).play();
+
     }
 
     start() {
@@ -31,7 +33,7 @@ export default class infoPanel extends cc.Component {
 
     close() {
         this.UIM.bgClickPlay();
-        
+
         this.node.active = false;
     }
 

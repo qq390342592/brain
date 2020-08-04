@@ -4,6 +4,7 @@ import SelectPanel from "./SelectPanel";
 import settingPanel from "./settingPanel";
 import guidePanel from "./guidePanel";
 import infoPanel from "./infoPanel";
+import finalPanel from "./finalPanel";
 
 const { ccclass, property } = cc._decorator;
 
@@ -25,6 +26,8 @@ export default class UIManager extends cc.Component {
     GdP: guidePanel;
     @property(infoPanel)
     IfP: infoPanel;
+    @property(finalPanel)
+    FP: finalPanel;
 
     @property(cc.Node)
     title: cc.Node;
@@ -95,6 +98,23 @@ export default class UIManager extends cc.Component {
                     imageUrl: url
                 }
             })
+        }
+
+        if (CC_WECHATGAME) {
+            wx.showShareMenu({
+                withShareTicket: true,
+                menus: ['shareAppMessage', 'shareTimeline']
+            })
+            // 绑定分享参数
+            wx.onShareTimeline(() => {
+                return {
+                    title: '颠覆思维，等你',
+                    imageUrl: 'https://mmocgame.qpic.cn/wechatgame/jD1blmnv6m09mpQiazGcRib6IeNfX6hbZsUbXKFe7vklLJdzGkjAnFDD2JSbvsarmL/0', // 图片 URL
+                    query: 'a=1&b=2'
+                }
+            })
+            // 取消绑定分享参数
+            // wx.offShareTimeline()
         }
 
 

@@ -83,19 +83,26 @@ export default class page extends cc.Component {
 
     //进入关卡
     EnterTheGate(event, customEventData) {
-        //
+        if (customEventData == 1) {
+            this.UIM.GdP.node.active = true;
+        }
+        //按钮音
         var UIM = this.node.parent.getComponent(SelectPanel).UIM;
         UIM.bgClickPlay();
-        //
+        //切换
         UIM.SP.node.active = false;
         UIM.GP.node.active = true;
         UIM.buttom.active = true;
         //
-        UIM.GP.node.children.forEach(element => {
-            element.active = false;
-        });
+        // UIM.GP.node.children.forEach(element => {
+        //     element.active = false;
+        // });
         //
-        UIM.GP.node.children[customEventData - 1].active = true;
+        // UIM.GP.node.children[customEventData - 1].active = true;
+
+        var a = cc.instantiate(UIM.GP.PB[customEventData - 1]);
+        a.parent = UIM.GP.node;
+
         UIM.level = customEventData;
         console.log("customEventData");
     }

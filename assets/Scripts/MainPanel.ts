@@ -5,10 +5,12 @@ const { ccclass, property } = cc._decorator;
 @ccclass
 export default class MainPanel extends cc.Component {
 
-    @property(UIManager)
+    // @property(UIManager)
     UIM: UIManager;
 
-    // onLoad () {}
+    onLoad () {
+        this.UIM = cc.find("Canvas/bg").getComponent(UIManager);
+    }
 
     start() {
 

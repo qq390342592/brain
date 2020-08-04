@@ -14,6 +14,10 @@ export default class awardPanel extends cc.Component {
 
     }
 
+    onEnable() {
+        this.node.children[0].children[0].getComponent(cc.Animation).play();
+    }
+
     close() {
         this.UIM.bgClickPlay();
 

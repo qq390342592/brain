@@ -52,26 +52,12 @@ export default class buttom extends cc.Component {
                 imageUrl: url
             })
         }
-        // wx.showShareMenu({
-        //     withShareTicket: true,
-        //     menus: ['shareAppMessage', 'shareTimeline']
-        // })
-        // // 绑定分享参数
-        // wx.onShareTimeline(() => {
-        //     return {
-        //         title: '转发标题',
-        //         imageUrl: '', // 图片 URL
-        //         query: 'a=1&b=2'
-        //     }
-        // })
-        // // 取消绑定分享参数
-        // wx.offShareTimeline()
+
     }
 
     //看视频
     video() {
         this.UIM.bgClickPlay();
-
     }
 
     //前进
@@ -79,16 +65,23 @@ export default class buttom extends cc.Component {
         this.UIM.bgClickPlay();
 
         if (this.UseWisdom(50)) {
-            var a = this.UIM.GP.node.children;
-            for (var i = 0; i < a.length; i++) {
-                if (a[i].active == true) {
-                    a[i].active = false;
-                    a[i + 1].active = true;
-                    this.UIM.level++;
-                    break;
-                }
-            }
+
+            this.UIM.level++;
+            this.UIM.GP.node.destroyAllChildren();
+
+            var a = cc.instantiate(this.UIM.GP.PB[this.UIM.level - 1]);
+            a.parent = this.UIM.GP.node;
         }
+    }
+
+    fastNotUseWisdom() {
+        this.UIM.bgClickPlay();
+
+        this.UIM.level++;
+        this.UIM.GP.node.destroyAllChildren();
+
+        var a = cc.instantiate(this.UIM.GP.PB[this.UIM.level - 1]);
+        a.parent = this.UIM.GP.node;
     }
 
     //返回
@@ -97,6 +90,7 @@ export default class buttom extends cc.Component {
 
         this.UIM.MP.node.active = true;
         this.UIM.GP.node.active = false;
+        this.UIM.GP.node.destroyAllChildren();
         this.node.active = false;
     }
 
