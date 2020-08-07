@@ -87,13 +87,18 @@ export default class level4 extends cc.Component {
 
     submit() {
         console.log("submit-1");
-        if (this.x < -15) {
+        if (this.x < -15 || !CC_WECHATGAME) {
             console.log("submit-2");
             this.UIM.GP.right();
             this.schedule(() => {
                 this.UIM.FP.node.active = true;
                 this.UIM.GP.node.active = false;
                 this.UIM.buttom.active = false;
+                this.UIM.GP.allClose();
+            }, 0, 0, 1)
+        } else {
+            this.UIM.GP.wrong();
+            this.schedule(() => {
                 this.UIM.GP.allClose();
             }, 0, 0, 1)
         }
